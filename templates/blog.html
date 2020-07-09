@@ -8,7 +8,7 @@
         {% for page in section.pages %}
         <div class="pageItem">
             <span>{{ page.date | date(format="%Y-%m-%d") }} &raquo;
-            <a class="Home-posts-post-title" href="{{ page.permalink }}">{{ page.title }}</a>
+            <a href="{{ page.permalink }}">{{ page.title }}</a>
             </span>
         </div>
         {% endfor %}

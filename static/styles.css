@@ -1,5 +1,6 @@
 :root {
   --yellow: #ffd500;
+  --orange: #ff9500;
   --dark-orange: #ff5500;
   --primary-gray: #979797;
   --secondary-green: #d5ff00;
@@ -27,6 +28,7 @@
 }
 
 :root[data-theme="dark"] {
+  --orange: #ff9500;
   --dark-orange: #ff5500;
   --light-grey: #444;
   --grey: #b0b0b0;
@@ -99,6 +101,19 @@ body {
   transition: 0.2s ease;
   box-shadow: 0 20px 30px var(--persistent-shadow-light);
 }
+
+a:link {
+  color: var(--orange)
+}
+
+a:visited {
+  color: var(--dark-grey);
+}
+
+a:hover {
+  color: var(--dark-orange)
+}
+
 .svg-link:hover::before {
   box-shadow: 0 30px 40px var(--persistent-shadow-light);
   transform: translateY(-5px);
