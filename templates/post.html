@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+{% block content %}
+<section>
+    <div class="features-section-parent">
+        <div class="pageItem">
+            <h1 class="Post-title">{{ page.title }}</h1>
+            <div >
+                <span>{{ page.date }}</span>
+            </div>
+            <div class="PageItem">{{ page.content | safe }}</div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=UTF-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1">
+    <meta name="description" content="the site description">
+    <meta name="keywords" content="btcpay">
+    <meta name="author" content="Notmandatory | notmandatory.org">
+    <meta property="og:title" content="Bitcoin Dev Kit">
+    <meta property="og:description" content="the site description">
+    <meta property="og:image" content="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#51b13e">
+    <meta name="msapplication-TileColor" content="#0f3b21">
+    <meta name="theme-color" content="#ffffff">
+    <title>Bitcoin Dev Kit</title>
+    <link rel="stylesheet" type="text/css" href="/page-styles.css">
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+
+<body>
+<div id="p-nm-co-ho">
+    <div class="pageContainerTopBackground __fal-left">
+        <div>
+            {% include "menu.html" %}
+        </div>
+
+        {% block content %}
+
+        <div class="features-section-parent">
+            <div class="pageItem">
+                {{ section.content | safe }}
+            </div>
+        </div>
+    </div>
+
+    {% endblock content %}
+
+    <div>
+        {% include "footer.html" %}
+    </div>
+
+</div>
+
+</div>
+<!-- END OF THEME CONTAINER -->
+</body>
+<script src="/js/scripts.js"></script>
+</html>

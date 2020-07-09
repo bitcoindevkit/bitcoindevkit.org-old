@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html dir="{{_to}}" data-theme="light">
+  <head>
+    <meta charset=UTF-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="{{btcpay-server-is-proudly-free}}">
+    <meta name="keywords" content="btcpay">
+    <meta name="author" content="Ed Sinaswee | flat18.co.uk">
+    <meta property="og:title" content="Bitcoin Dev Kit">
+    <meta property="og:description" content="{{btcpay-server-is-proudly-free}}">
+    <meta property="og:image" content="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#51b13e">
+    <meta name="msapplication-TileColor" content="#0f3b21">
+    <meta name="theme-color" content="#ffffff">
+    <title>{{donate}} | Bitcoin Dev Kit</title>
+    <link rel="stylesheet" type="text/css" href="/css/fa_.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/page-styles.css">
+  </head>
+  <body>
+    <div id="p-nm-co-ho">
+      <div class="pageContainerTopBackground sh-pg __fal-{{_rl}}">
+        <div>
+          {{_menTemp}}
+        </div>
+
+        <!-- START PAGE CONTENTS -->
+
+        <contents>
+          <h1>{{support-the-btcpay}}</h1>
+          <p>{{btcpay-server-is-a-self-hosted}}</p>
+
+          <div class="donation-type">
+            <h2>{{corporate-donations}}</h2>
+
+            <p>{{corporate-entities-wishing}}<br>
+              <a class="cta-foundation-donation button-pri button" href="https://foundation.btcpayserver.org">{{btcpay-server-foundation}}&nbsp;&nbsp;<i
+                class="fas fa-chevron-{{_rl}}"></i>
+              </a>
+            </p>
+
+          </div>
+
+          <div class="donation-type">
+            <h2>{{individual-donations}}</h2>
+            <p>{{if-you-re-not}}</p>
+            <div class="individual-grid" id="donGr">
+            {{_donationsBlock}}
+          </div>
+            <p>{{btcpay-contributor-}}&nbsp;<a href="https://github.com/btcpayserver/btcpayserver.github.io/blob/master/source/src/json/donations.json">{{add-yourself-to}}</a>
+            </p>
+          </div>
+
+        </contents>
+
+        <!-- END PAGE CONTENTS -->
+
+        <div class="blockGreyFoot">
+          {{_ftblk}}
+        </div>
+      </div>
+    </div>
+    <!-- END OF p-nm-co-ho -->
+  </body>
+  <script>
+    var icons = document.getElementById("donGr");
+    var users = {{_jsonDonations}};
+
+    function shuffle(array) {
+      var currentIndex = array.length,
+        temporaryValue,
+        randomIndex;
+      while (0 !== currentIndex) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+      }
+      return array;
+    }
+    users = shuffle(users);
+    var rebuilt = "";
+    for (i = 0; i < users.length; i++) {
+      var bgi = users[i][2]
+        ? "style=\"background-image:url(" + users[i][2] + ")\""
+        : "";
+      rebuilt += '<a href="' + users[i][1] + '" class="ind-icon"><div class="in-img" ' + bgi + '></div><span class="in-nom">' + users[i][0] + '</span></a>';
+    }
+    icons.innerHTML = rebuilt;
+  </script>
+  <!-- Schema.org JSON-LD Markup for Search Engine Optimization -->
+  <script type='application/ld+json'>
+    {
+      "@context": "https://schema.org/",
+      "@type": "SoftwareApplication",
+      "applicationCategory": "FinanceApplication",
+      "name": "Bitcoin Dev Kit",
+      "image": "https://btcpayserver.org/img/favicon.png",
+      "availableOnDevice": "Desktop",
+      "author": {
+        "@type": "Organization",
+        "url": "https://foundation.btcpayserver.org/",
+        "name": "Bitcoin Dev Kit Foundation",
+        "sameAs": ["https://twitter.com/BtcpayServer", "https://t.me/btcpayserver", "http://chat.btcpayserver.org/"]
+      },
+      "downloadUrl": "https://github.com/btcpayserver/btcpayserver/releases",
+      "fileSize": "6MB",
+      "operatingSystem": [
+        "Windows", "Linux"
+      ],
+      "releaseNotes": "https://blog.btcpayserver.org/changelog/",
+      "screenshot": "https://blog.btcpayserver.org/wp-content/uploads/2019/05/BTCPay-Invoices-1024x552.gif",
+      "softwareVersion": "1.0.3.133",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "ratingCount": "20"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "BTC"
+      }
+    }
+  </script>
+  <script src="/js/scripts.js"></script>
+</html>
