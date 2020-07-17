@@ -21,7 +21,8 @@
       {% endfor %}
       <li>{{ section.title }}</li>
     </ul>
-    <h1>{{ config.title }}</h1>
+    <!-- <h1 class="sidebar-title"># {{ config.title }}</h1> -->
+    <hr style="width: 100%; color: #979797;"/>
     {{ macro::tree(currentsection = section.title) }} 
     {% endblock nav %}
   </nav>
