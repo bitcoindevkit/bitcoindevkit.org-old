@@ -22,7 +22,7 @@
       <li>{{ section.title }}</li>
     </ul>
     <h1>{{ config.title }}</h1>
-    {{ macro::tree() }} 
+    {{ macro::tree(currentsection = section.title) }} 
     {% endblock nav %}
   </nav>
   
