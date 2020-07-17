@@ -1,0 +1,17 @@
+{% extends "docs-section.html" %}
+
+{% block nav %}
+  <ul id="breadcrumbs">
+    {% for parent in page.ancestors %} {% set s = get_section(path=parent,
+      include_pages=false) %}
+      <li><a href="{{s.permalink}}">{{s.title}}</a>&nbsp;&#8594;&nbsp;</li>
+      {% endfor %}
+  </ul>
+  <h1>{{ page.title }}</h1>
+{% endblock nav %}
+
+{% block documentation %}
+<article>
+  {{ page.content | safe }}
+</article>
+{% endblock documentation %}

@@ -1,5 +1,6 @@
 +++
 title = "Home"
+template = "landing.html"
 +++
 
 ## Welcome! below is an overview of the Bitcoin Dev Kit project's objectives, background, planned features and a very rough road map. If you have any questions or would like to get involved please send us a DM on twitter [@bitcoindevkit](https://twitter.com/bitcoindevkit).
