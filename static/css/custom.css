@@ -10,3 +10,17 @@
 .docs-article {
   flex: 3;
 }
+
+#breadcrumbs {
+  margin: 0;
+  padding: 0;
+}
+
+#bger {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-title {
+  margin: 0.4rem 0rem;
+}
