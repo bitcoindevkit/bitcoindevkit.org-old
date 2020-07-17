@@ -1,7 +1,12 @@
 {% extends "index.html" %} 
 
 {% block content %}
-<div>
-  {{ section.content | safe }}
+
+<!-- <div class="landing-content-container"> -->
+<div class="features-section-parent">
+  <div class="pageItem">
+    {{ section.content | safe }}
+  </div>
 </div>
+
 {% endblock content %}

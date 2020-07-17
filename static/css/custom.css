@@ -1,0 +1,12 @@
+.docs-content-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.docs-sidebar {
+  flex: 1;
+}
+
+.docs-article {
+  flex: 3;
+}
