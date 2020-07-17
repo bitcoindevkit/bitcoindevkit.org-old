@@ -1,0 +1,35 @@
+{% import "macro.html" as macro %}
+
+{% extends "index.html" %} 
+
+{% block content %}
+<nav>
+  <div id="subnav">
+    <a href="/search">&#8981;</a>
+  </div>
+
+  {% block nav %}
+    <ul id="breadcrumbs">
+      {% for parent in section.ancestors %}
+      {% if parent != "_index.md" %}
+        {% set s = get_section(path=parent, include_pages=false) %}
+          <li>
+            <a href="{{s.permalink}}">{{s.title}}</a>&nbsp;&#8594;&nbsp;
+          </li>
+      {% endif %}
+      {% endfor %}
+      <li>{{ section.title }}</li>
+    </ul>
+    <h1>{{ config.title }}</h1>
+    {{ macro::tree() }} 
+  {% endblock nav %}
+</nav>
+
+<main>
+  <article>
+    {% block documentation %}
+    {{ section.content | safe }}
+    {% endblock documentation %}
+  </article>
+</main>
+{% endblock content %}
