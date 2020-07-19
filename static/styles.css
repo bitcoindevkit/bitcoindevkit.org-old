@@ -2504,3 +2504,11 @@ h3 {
     url(/fonts/Open_Sans/open-sans-800italic.ttf) format("truetype"),
     url(/fonts/Open_Sans/open-sans-800italic.svg#OpenSans) format("svg");
 }
+@font-face {
+  font-family: "Futura-BtBold";
+  src: url(/fonts/Futura_Bold/futurab.woff2) format('woff2'),
+  url(/fonts/Futura_Bold/futurab.woff) format('woff'),
+  url(/fonts/Futura_Bold/futurab.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
