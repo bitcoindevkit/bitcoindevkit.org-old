@@ -5,12 +5,17 @@
     {% for parent in page.ancestors %}
       {% if parent != "_index.md" %}
         {% set s = get_section(path=parent, include_pages=false) %}
-          <li><a href="{{s.permalink}}">{{s.title}}</a>&nbsp;&#8594;&nbsp;</li>
+          <li>
+            <a href="{{s.permalink}}">{{s.title}}</a>&nbsp;&#8594;&nbsp;
+          </li>
       {% endif %}
     {% endfor %}
+  <li>{{ page.title }}</li>
+
   </ul>
   <hr style="width: 100%; color: #979797;"/>
-  <h1>{{ page.title }}</h1>
+  {% set s = get_section(path=page.ancestors.2, include_pages=false) %}
+  {{ macro::tree(currentsection = s.title) }}
 {% endblock nav %}
 
 {% block documentation %}
