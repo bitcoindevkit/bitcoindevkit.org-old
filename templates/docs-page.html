@@ -15,7 +15,7 @@
   </ul>
   <hr style="width: 100%; color: #979797;"/>
   {% set s = get_section(path=page.ancestors.2, include_pages=false) %}
-  {{ macro::tree(currentsection = s.title) }}
+  {{ macro::tree(currentsection = s.title, currentpage = page.title) }}
 {% endblock nav %}
 
 {% block documentation %}
