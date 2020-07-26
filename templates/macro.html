@@ -1,31 +1,40 @@
 {% macro tree(currentsection, currentpage) %}
-  <a href="javascript:void(0);" onclick="burger()" id="mobile">&#9776;</a>
-    <ul id="bger">
-      {% set docsroot = get_section(path="docs/_index.md") %}
-      
-      {% for subsection in docsroot.subsections | sort %}
-        {% set subsection_item = get_section(path=subsection) %}
-          <li style="margin-top: 0.8rem; margin-bottom: 0.2rem;">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAaElEQVRIx2NgGOqAEcZgZefQb25suIBPcW19g8Hvnz8ukmwBKzuHQHNjw3tiNFRUVDCSZAExLicX1NY3ODJ2dHT8ZxgF+OKA1kHERGsfjFowasGoBaMWEGNBbX2DI60Mr61vkBr69QEAFDIY9Yz1owAAAAAASUVORK5CYII=" width="16px" />&nbsp;
-            <a href="{{ subsection_item.permalink | safe }}" style="font-weight: 400;">
-              {{ subsection_item.title }}
-            </a>
-          </li>
-          {% if subsection_item.title == currentsection %}
-            {% for subpage in subsection_item.pages %}
-              {% if currentpage == subpage.title %}
-              <li style="margin-left: 1.2rem;">
-                &nbsp;&nbsp;&nbsp;&nbsp;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH5AUDFDoqfmnPqQAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAC6SURBVEjH7ZTBCcIwFIa/lO6hA7iA6BCO4AZe/xHeCF49C4I7VOfQk2PUS4QibUzahiL0h0AOj7x87wtx+JhZTWQkLYFnTG1Bj5jZBVjE1LpvAknux+F1CkkvgkazB7DJ0kDSHniZ2RFY5yA4SToAKzO7d5EUoVk3V0fZWdLO11dt4gc58Ll62a1OBr2igJ8tcBuLoO0S1Wdfpt40lTALQTNlYI5ujAbTEaT8riHi2cHs4B8dpM5+coI3MpVSlNj0qyUAAAAASUVORK5CYII=" width="16px" />
-                &nbsp;<a href="{{ subpage.permalink | safe }}" style="font-style: italic; color: hsl(204, 86%, 53%);">{{ subpage.title }}</a>
-              </li>
-              {% else %}
-              <li style="margin-left: 1.2rem;">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH5AUDFDoqfmnPqQAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAC6SURBVEjH7ZTBCcIwFIa/lO6hA7iA6BCO4AZe/xHeCF49C4I7VOfQk2PUS4QibUzahiL0h0AOj7x87wtx+JhZTWQkLYFnTG1Bj5jZBVjE1LpvAknux+F1CkkvgkazB7DJ0kDSHniZ2RFY5yA4SToAKzO7d5EUoVk3V0fZWdLO11dt4gc58Ll62a1OBr2igJ8tcBuLoO0S1Wdfpt40lTALQTNlYI5ujAbTEaT8riHi2cHs4B8dpM5+coI3MpVSlNj0qyUAAAAASUVORK5CYII=" width="16px" />
-                &nbsp;<a href="{{ subpage.permalink | safe }}">{{ subpage.title }}</a>
-              </li>
-              {% endif %}
-            {% endfor %}
-          {% endif %}
+  
+<a href="javascript:void(0);" onclick="burger()" id="mobile">&#9776;</a>
+
+<ul id="bger">
+  {% set docsroot = get_section(path="docs/_index.md") %}
+  
+  {% for subsection in docsroot.subsections | sort %}
+    {% set subsection_item = get_section(path=subsection) %}
+
+    <a href="{{ subsection_item.permalink | safe }}" style="font-weight: 400;">
+      <li style="margin-top: 0.8rem; margin-bottom: 0.2rem;">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAaElEQVRIx2NgGOqAEcZgZefQb25suIBPcW19g8Hvnz8ukmwBKzuHQHNjw3tiNFRUVDCSZAExLicX1NY3ODJ2dHT8ZxgF+OKA1kHERGsfjFowasGoBaMWEGNBbX2DI60Mr61vkBr69QEAFDIY9Yz1owAAAAAASUVORK5CYII=" width="16px" />&nbsp;
+        {{ subsection_item.title }}
+      </li>
+    </a>
+
+    {% if subsection_item.title == currentsection %}
+      {% for subpage in subsection_item.pages %}
+        {% if currentpage == subpage.title %}
+          <a href="{{ subpage.permalink | safe }}" style="font-style: italic; color: hsl(204, 86%, 53%);">
+            <li style="margin-left: 1.2rem;">
+              &nbsp;&nbsp;&nbsp;&nbsp;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH5AUDFDoqfmnPqQAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAC6SURBVEjH7ZTBCcIwFIa/lO6hA7iA6BCO4AZe/xHeCF49C4I7VOfQk2PUS4QibUzahiL0h0AOj7x87wtx+JhZTWQkLYFnTG1Bj5jZBVjE1LpvAknux+F1CkkvgkazB7DJ0kDSHniZ2RFY5yA4SToAKzO7d5EUoVk3V0fZWdLO11dt4gc58Ll62a1OBr2igJ8tcBuLoO0S1Wdfpt40lTALQTNlYI5ujAbTEaT8riHi2cHs4B8dpM5+coI3MpVSlNj0qyUAAAAASUVORK5CYII=" width="16px" />
+              &nbsp;{{ subpage.title }}
+            </li>
+          </a>
+        {% else %}
+          <a href="{{ subpage.permalink | safe }}">
+            <li style="margin-left: 1.2rem;">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH5AUDFDoqfmnPqQAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAC6SURBVEjH7ZTBCcIwFIa/lO6hA7iA6BCO4AZe/xHeCF49C4I7VOfQk2PUS4QibUzahiL0h0AOj7x87wtx+JhZTWQkLYFnTG1Bj5jZBVjE1LpvAknux+F1CkkvgkazB7DJ0kDSHniZ2RFY5yA4SToAKzO7d5EUoVk3V0fZWdLO11dt4gc58Ll62a1OBr2igJ8tcBuLoO0S1Wdfpt40lTALQTNlYI5ujAbTEaT8riHi2cHs4B8dpM5+coI3MpVSlNj0qyUAAAAASUVORK5CYII=" width="16px" />
+              &nbsp;{{ subpage.title }}
+            </li>
+          </a>
+        {% endif %}
       {% endfor %}
-    </ul>
+    {% endif %}
+  {% endfor %}
+</ul>
+
 {% endmacro tree %}
