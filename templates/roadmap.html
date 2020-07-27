@@ -8,7 +8,7 @@
         {% set repos = ['bdk','bdk-android','bdk-android-app', 'bitcoindevkit.org'] %}
         {% for repo in repos %}
             <h3><span style="border:2px; border-style:solid; border-color:#000000;padding: 3px"><a target="_blank" rel="noopener noreferrer" href="https://github.com/bitcoindevkit/{{repo}}">{{ repo }}</a></span></h3>
-                {% set issues = load_data(url="https://api.github.com/repos/bitcoindevkit/" ~ repo ~ "/issues?labels=enhancement&sort=updated&milestone=*", format="json") %}
+                {% set issues = load_data(url="https://api.github.com/repos/bitcoindevkit/" ~ repo ~ "/issues?labels=enhancement&state=all&sort=updated&milestone=*", format="json") %}
                 {% if issues %}
                     {% set milestones = issues | map(attribute="milestone") | unique(attribute="id") %}
                     {% for milestone in milestones  | sort(attribute="number") %}
@@ -23,7 +23,7 @@
                         {% endfor %}
                     {% endfor %}
                 {% endif %}
-                {% set future_issues = load_data(url="https://api.github.com/repos/bitcoindevkit/" ~ repo ~ "/issues?labels=enhancement&sort=updated&milestone=none", format="json") %}
+                {% set future_issues = load_data(url="https://api.github.com/repos/bitcoindevkit/" ~ repo ~ "/issues?labels=enhancement&state=all&sort=updated&milestone=none", format="json") %}
                 {% if future_issues %}
                     <h4><a target="_blank" rel="noopener noreferrer" href="https://github.com/bitcoindevkit/{{ repo }}/issues?q=is%3Aissue+is%3Aopen+no%3Amilestone+label%3Aenhancement">Future</a></h4>
                     {% for issue in future_issues %}
