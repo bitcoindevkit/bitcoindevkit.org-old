@@ -1,11 +1,11 @@
-name: Build and deploy on push
+name: Build and deploy on push and daily at 01:00 UTC
 
 on:
   push:
     branches:
       - master
   schedule:
-      - cron:  '0 16 * * *'
+      - cron: '0 1 * * *'
 
 jobs:
   build:
