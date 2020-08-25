@@ -25,3 +25,7 @@
 .sidebar-title {
   margin: 0.4rem 0rem;
 }
+
+pre {
+  margin: 0 0 2rem 0;
+}
