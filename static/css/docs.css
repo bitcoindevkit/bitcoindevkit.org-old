@@ -144,11 +144,11 @@ main article {
   margin: 1rem 0 0;
 }
 main article ul, main article ol {
-  list-style-position: inside;
-  margin: 0 0 1rem 1rem;
+  /* list-style-position: inside; */
+  /* margin: 0 0 1rem 1rem; */
 }
 main article a:visited {
-  color: blueviolet;
+  /* color: blueviolet; */
 }
 main img {
   max-width: 100%}
