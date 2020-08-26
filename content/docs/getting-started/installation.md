@@ -4,9 +4,9 @@ weight = 2
 template = "docs-page.html"
 +++
 
-## Bitcoin Development Kit
+# Installing the Bitcoin Development Kit
 
-This library combines rust-bitcoin, murmel, and rust-wallet libraries to provide basic functionality for interacting with the 
+This library combines the rust-bitcoin, murmel, and rust-wallet libraries to provide basic functionality for interacting with the 
 bitcoin network. The library can be used in an android mobile app by including the optional jni module.
 
 <br />
@@ -15,11 +15,10 @@ bitcoin network. The library can be used in an android mobile app by including t
 
 ### 1. Install Rustup
 [Install Link](https://www.rust-lang.org/learn/get-started)  
-<br />
 
 ### 2. Install rust targets (if not already installed)
    
-Android 
+Android
 ```sh
 rustup target add x86_64-apple-darwin x86_64-unknown-linux-gnu x86_64-linux-android aarch64-linux-android armv7-linux-androideabi i686-linux-android
 ```
@@ -28,18 +27,17 @@ iOS
 ```sh
 rustup target add aarch64-apple-ios armv7-apple-ios armv7s-apple-ios x86_64-apple-ios i386-apple-ios
 ```
-<br />
 
 ### 3. Install cargo-ndk cargo extension
 
 [cargo-ndk](https://docs.rs/crate/cargo-ndk/0.6.1)
    
-#### Android
+Android
 ```sh
 cargo install cargo-ndk
 ```
 
-#### iOS
+iOS
 ```sh
 cargo install cargo-lipo
 cargo install cbindgen
@@ -108,7 +106,7 @@ export CXX_i686_linux_android=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x
 
 <br />
 
-## REGTEST Testing
+## Regtest Testing
 
 The 🍣 [Nigiri CLI](https://github.com/vulpemventures/nigiri) tool can be used to spin-up a complete `regtest` 
 development environment that includes a `bitcoin` node, a Blockstream `electrs` explorer and the 
@@ -117,3 +115,5 @@ development environment that includes a `bitcoin` node, a Blockstream `electrs` 
 First install [Docker-Desktop](https://www.docker.com/products/docker-desktop) on your machine. Then see the 
 [Nigiri CLI README.md](https://github.com/vulpemventures/nigiri/blob/master/README.md) file to install via prebuilt binaries or from the 
  project source.
+
+You can also read our documentation article on setting up Nigiri [here](@/docs/testing-bdk/nigiri-regtest.md).
