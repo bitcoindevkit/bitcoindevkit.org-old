@@ -27,12 +27,10 @@
     {% endblock nav %}
   </nav>
   
-  <main class="docs-article">
-    <article>
+  <div class="docs-article">
       {% block documentation %}
       {{ section.content | safe }}
       {% endblock documentation %}
-    </article>
-  </main>
+  </div>
 </div>
 {% endblock content %}
