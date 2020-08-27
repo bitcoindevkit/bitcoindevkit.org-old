@@ -7,13 +7,13 @@
 .docs-sidebar{
   min-width: 400px;
   max-width: 20vw;
-  padding: 2vw 4vw;
+  padding: 20px 42px;
   display: flex;
   flex-flow: column nowrap;
 }
 
 .docs-article {
- padding: 2vw 4vw;
+ padding: 20px 42px;
 }
 
 @media screen and (max-width: 768px) {
