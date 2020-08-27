@@ -4,19 +4,28 @@
   width: 100%;
 }
 
+.docs-sidebar{
+  min-width: 400px;
+  max-width: 20vw;
+  padding: 2vw 4vw;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.docs-article {
+ padding: 2vw 4vw;
+}
+
 @media screen and (max-width: 768px) {
   .docs-content-container{
     flex-direction: column;
   }
-}
-
-.docs-sidebar {
-  flex: 1;
-}
-
-.docs-article {
-  flex: 3;
-  overflow-x: auto;
+  .docs-sidebar {
+    max-width: unset;
+  }
+  #mobile {
+    display: block;
+  }
 }
 
 #breadcrumbs {
