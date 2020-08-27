@@ -5,4 +5,10 @@ sort_by = "weight"
 template = "docs-section.html"
 +++
 
-# Getting Started Section
+<div>
+  <center>
+    <h1 class="section-title">
+      Getting Started
+    </h1>
+  </center>
+</div>
