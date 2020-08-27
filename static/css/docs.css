@@ -101,8 +101,8 @@ h1 {
 }
 nav {
   /* width: 34vw; */
-  /* max-width: 40rem; */
-  padding: 2vw 4vw;
+  max-width: 20rem;
+  padding: 2vw 0vw 2vw 4vw;
   display: flex;
   flex-flow: column nowrap;
 }
