@@ -29,6 +29,8 @@
     <meta property="twitter:description" content="A secure and easy to use mobile cross platform (iOS/Android) Bitcoin wallet dev kit and example apps.">
     <meta property="twitter:image" content="https://bitcoindevkit.org/img/bdk-logo-meta.svg">
 
+    <!-- stylesheets -->
+    <link rel="stylesheet" type="text/css" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/css/docs.css">
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
     <link rel="stylesheet" type="text/css" href="/css/page-styles.css">
@@ -36,34 +38,31 @@
 </head>
 
 <body>
-    
-  <div id="p-nm-co-ho">
+<div id="p-nm-co-ho">
     <div class="pageContainerTopBackground __fal-left">
-      <div>
-        {% include "menu.html" %}
-      </div>
-    
-      {% block content %}
-      {% endblock content %}
+        <div>
+            {% include "menu.html" %}
+        </div>
+
+        {% block content %}
+
+        <div class="features-section-parent">
+            <div class="pageItem">
+                {{ section.content | safe }}
+            </div>
+        </div>
     </div>
-    
+
+    {% endblock content %}
+
     <div>
-      {% include "footer.html" %}
+        {% include "footer.html" %}
     </div>
-  </div>
-    
-  <script>
-    function burger() {
-    var x = document.getElementById("bger");
-    if (x.style.display === "block") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "block";
-    }
-    }
-  </script>
+
+</div>
+
+</div>
+<!-- END OF THEME CONTAINER -->
 </body>
-
 <script src="/js/scripts.js"></script>
-
 </html>
