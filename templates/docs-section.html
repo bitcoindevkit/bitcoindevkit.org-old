@@ -6,7 +6,13 @@
 <div class="docs-content-container">
   <nav class="docs-sidebar">
     <div id="subnav">
-      <a href="/search">&#8981;</a>
+      <a href="/search">
+        <i class="fa fa-search"></i>
+      </a>
+      <!-- <a href="/search">&#8981;</a> -->
+      <a onclick="burger()" id="mobile">
+        <i class="fa fa-bars"></i>
+      </a>
     </div>
     
     {% block nav %}
