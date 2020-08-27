@@ -44,6 +44,7 @@
 
 pre {
   margin: 0 0 2rem 0;
+  white-space: pre-wrap;
 }
 
 article > h2::after {
