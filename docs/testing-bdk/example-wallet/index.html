@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=UTF-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1">
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    
+    <!-- Primary Meta Tags -->
+    <title>Bitcoin Dev Kit</title>
+    <meta name="title" content="Bitcoin Dev Kit">
+    <meta name="description" content="A secure and easy to use mobile cross platform (iOS/Android) Bitcoin wallet dev kit and example apps.">
+    <meta name="keywords" content="bitcoindevkit">
+    <meta name="author" content="Notmandatory | notmandatory.org">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bitcoindevkit.org/">
+    <meta property="og:title" content="Bitcoin Dev Kit">
+    <meta property="og:description" content="A secure and easy to use mobile cross platform (iOS/Android) Bitcoin wallet dev kit and example apps.">
+    <meta property="og:image" content="https://bitcoindevkit.org/img/bdk-logo-meta.svg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://bitcoindevkit.org/">
+    <meta property="twitter:title" content="Bitcoin Dev Kit">
+    <meta property="twitter:description" content="A secure and easy to use mobile cross platform (iOS/Android) Bitcoin wallet dev kit and example apps.">
+    <meta property="twitter:image" content="https://bitcoindevkit.org/img/bdk-logo-meta.svg">
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" type="text/css" href="/css/docs.css">
+    <link rel="stylesheet" type="text/css" href="/css/page-styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+</head>
+
+<body>
+<div id="p-nm-co-ho">
+    <div class="pageContainerTopBackground __fal-left">
+        <div>
+            <div class="menuBar" id="topMarker" dir='ltr'>
+    <a href="../">
+        <svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg"
+             xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+                <rect id="path-1" x="0" y="0" width="100" height="100"></rect>
+            </defs>
+            <text id="Bitcoin-Dev-Kit" font-family="Futura-BtBold, Futura-Bold, Futura" font-size="24" font-weight="bold"
+                  line-spacing="22" fill="#13161F">
+                <tspan x="4" y="48">Bitcoin</tspan>
+                <tspan x="4" y="70">Dev</tspan>
+                <tspan x="4" y="92">Kit</tspan>
+            </text>
+        </svg>
+    </a>
+    <input type="checkbox" id="menuTrigger" name="menuTrigger" class="menuTrigger"/>
+    <div class="mobileMenuShortcut">
+        <i class="fa fa-bars"></i>
+    </div>
+
+    <div class="menuContents menuContentsMobile" id="menuContents">
+        <div class="menuLinkParent">
+            <a class="tomCL menuLink mobileOnly mobileCloseOpenNOJS nullTrans">
+                <i class="fa fa-times nullTrans"></i>
+            </a>
+        </div>
+        
+        <div class="menuLinkParent">
+            <a alt="Docs" class="menuLink" target="blank_" href="/docs">
+                <span>Docs</span></a>
+        </div>
+        
+        <div class="menuLinkParent">
+            <a alt="Roadmap" class="menuLink" href="/roadmap">
+                <span class="nullTrans">Roadmap</span></a>
+        </div>
+
+        <div class="menuLinkParent">
+            <a alt="Blog" class="menuLink" href="/blog">
+                <span>Blog</span></a>
+        </div>
+
+
+        <div class="menuLinkParent">
+            <a target="_blank" rel="noopener noreferrer" alt="Github" class="menuLink nullTrans" href="https://github.com/bitcoindevkit">
+                <span class="nullTrans">Github</span></a>
+        </div>
+
+        <div class="menuLinkParent mobileOnly"><br>
+            <a class="menuLink go_dark" href="#" data-theme-switch="dark">
+                <span>
+                    <svg class="-ab-trig-spec" xmlns="http://www.w3.org/2000/svg" width="8" height="8"
+                         viewBox="0 0 8 8">
+                        <path fill="transparent"
+                              d="M2.72 0c-1.58.53-2.72 2.02-2.72 3.78 0 2.21 1.79 4 4 4 1.76 0 3.25-1.14 3.78-2.72-.4.13-.83.22-1.28.22-2.21 0-4-1.79-4-4 0-.45.08-.88.22-1.28z">
+                        </path>
+                    </svg>
+                </span>
+            </a>
+            <a class="menuLink go_light" href="#" data-theme-switch="light">
+                <svg class="-ab-trig-spec" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8">
+                    <path fill="transparent"
+                          d="M4 0c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zm-2.5 1c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zm5 0c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zm-2.5 1c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-3.5 1.5c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zm7 0c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zm-6 2.5c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zm5 0c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zm-2.5 1c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5z">
+                    </path>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <div class="desktop-only -inl-ti">
+
+        <div class="menuLinkParent">
+            <a class="menuLink go_dark" href="#" data-theme-switch="dark">
+                <span>
+                    <svg class="-ab-trig-spec" xmlns="http://www.w3.org/2000/svg" width="8" height="8"
+                         viewBox="0 0 8 8">
+                        <path fill="transparent"
+                              d="M2.72 0c-1.58.53-2.72 2.02-2.72 3.78 0 2.21 1.79 4 4 4 1.76 0 3.25-1.14 3.78-2.72-.4.13-.83.22-1.28.22-2.21 0-4-1.79-4-4 0-.45.08-.88.22-1.28z">
+                        </path>
+                    </svg>
+                </span>
+            </a>
+            <a class="menuLink go_light" href="#" data-theme-switch="light">
+                <svg class="-ab-trig-spec" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8">
+                    <path fill="transparent"
+                          d="M4 0c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zm-2.5 1c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zm5 0c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zm-2.5 1c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-3.5 1.5c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zm7 0c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zm-6 2.5c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zm5 0c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zm-2.5 1c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5z">
+                    </path>
+                </svg>
+            </a>
+        </div>
+    </div>
+</div>
+
+        </div>
+
+        
+
+<div class="docs-content-container">
+  <nav class="docs-sidebar">
+    <div id="subnav">
+      <a href="/search">
+        <i class="fa fa-search"></i>
+      </a>
+      <!-- <a href="/search">&#8981;</a> -->
+      <a onclick="burger()" id="mobile">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    
+    
+  <ul id="breadcrumbs">
+    
+      
+    
+      
+        
+          <li>
+            <a href="https:&#x2F;&#x2F;bitcoindevkit.org&#x2F;docs&#x2F;">BDK Docs</a>&nbsp;&#8594;&nbsp;
+          </li>
+      
+    
+      
+        
+          <li>
+            <a href="https:&#x2F;&#x2F;bitcoindevkit.org&#x2F;docs&#x2F;testing-bdk&#x2F;">Testing</a>&nbsp;&#8594;&nbsp;
+          </li>
+      
+    
+  <li>Using the Example Wallet</li>
+
+  </ul>
+  <hr style="width: 100%; color: #979797;"/>
+  
+  
+
+<ul id="bger">
+  
+  
+  
+    
+
+    <a href="https://bitcoindevkit.org/docs/getting-started/" style="font-weight: 400;">
+      <li style="margin-top: 0.8rem; margin-bottom: 0.2rem;">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAaElEQVRIx2NgGOqAEcZgZefQb25suIBPcW19g8Hvnz8ukmwBKzuHQHNjw3tiNFRUVDCSZAExLicX1NY3ODJ2dHT8ZxgF+OKA1kHERGsfjFowasGoBaMWEGNBbX2DI60Mr61vkBr69QEAFDIY9Yz1owAAAAAASUVORK5CYII=" width="16px" />&nbsp;
+        Getting Started
+      </li>
+    </a>
+
+    
+  
+    
+
+    <a href="https://bitcoindevkit.org/docs/testing-bdk/" style="font-weight: 400;">
+      <li style="margin-top: 0.8rem; margin-bottom: 0.2rem;">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAaElEQVRIx2NgGOqAEcZgZefQb25suIBPcW19g8Hvnz8ukmwBKzuHQHNjw3tiNFRUVDCSZAExLicX1NY3ODJ2dHT8ZxgF+OKA1kHERGsfjFowasGoBaMWEGNBbX2DI60Mr61vkBr69QEAFDIY9Yz1owAAAAAASUVORK5CYII=" width="16px" />&nbsp;
+        Testing
+      </li>
+    </a>
+
+    
+      
+        
+          <a href="https://bitcoindevkit.org/docs/testing-bdk/nigiri-regtest/">
+            <li style="margin-left: 1.2rem;">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH5AUDFDoqfmnPqQAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAC6SURBVEjH7ZTBCcIwFIa/lO6hA7iA6BCO4AZe/xHeCF49C4I7VOfQk2PUS4QibUzahiL0h0AOj7x87wtx+JhZTWQkLYFnTG1Bj5jZBVjE1LpvAknux+F1CkkvgkazB7DJ0kDSHniZ2RFY5yA4SToAKzO7d5EUoVk3V0fZWdLO11dt4gc58Ll62a1OBr2igJ8tcBuLoO0S1Wdfpt40lTALQTNlYI5ujAbTEaT8riHi2cHs4B8dpM5+coI3MpVSlNj0qyUAAAAASUVORK5CYII=" width="16px" />
+              &nbsp;Set up a Regtest Network
+            </li>
+          </a>
+        
+      
+        
+          <a href="https://bitcoindevkit.org/docs/testing-bdk/example-wallet/" style="font-style: italic; color: hsl(204, 86%, 53%);">
+            <li>
+              &nbsp;&nbsp;&nbsp;&nbsp;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH5AUDFDoqfmnPqQAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAC6SURBVEjH7ZTBCcIwFIa/lO6hA7iA6BCO4AZe/xHeCF49C4I7VOfQk2PUS4QibUzahiL0h0AOj7x87wtx+JhZTWQkLYFnTG1Bj5jZBVjE1LpvAknux+F1CkkvgkazB7DJ0kDSHniZ2RFY5yA4SToAKzO7d5EUoVk3V0fZWdLO11dt4gc58Ll62a1OBr2igJ8tcBuLoO0S1Wdfpt40lTALQTNlYI5ujAbTEaT8riHi2cHs4B8dpM5+coI3MpVSlNj0qyUAAAAASUVORK5CYII=" width="16px" />
+              &nbsp;Using the Example Wallet
+            </li>
+          </a>
+        
+      
+    
+  
+</ul>
+
+
+
+  </nav>
+  
+  <div class="docs-article">
+      
+<article>
+  <h1 id="working-with-the-bdk-cli-example-wallet">Working with the bdk CLI Example Wallet</h1>
+<p>The bitcoindevkit comes with an example cli wallet used for testing during development. This article explains what it offers and how to use it.</p>
+<br />
+<h2 id="building-the-wallet">Building the Wallet</h2>
+<p>Cargo (Rust's package manager) offers the ability to build and run examples scripts that can be added to libraries under a directory usually called <code>examples</code>. You build the examples using the following command:</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#bf616a;">cargo</span><span style="color:#c0c5ce;"> build</span><span style="color:#bf616a;"> --examples
+</span></code></pre>
+<p>In our case, this will produce a binary called <code>wallet</code> which you can find under <code>/target/debug/examples</code>.</p>
+<p>You can then run the binary using the following structure:</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#bf616a;">cargo</span><span style="color:#c0c5ce;"> run</span><span style="color:#bf616a;"> --example</span><span style="color:#c0c5ce;"> wallet -- &lt;flags and arguments to be passed to the binary&gt;
+</span></code></pre><br />
+<h2 id="using-the-wallet-basics">Using the Wallet (Basics)</h2>
+<p>Start by running the wallet with the <code>--help</code> flag to see what it can do:</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#c0c5ce;">cargo run --example wallet --help
+
+wallet 0.1.0
+BDK Team
+Example bdk based wallet for testing
+
+USAGE:
+    wallet [OPTIONS] --connections &lt;NUMBER&gt; --password &lt;PASSWORD&gt;
+
+FLAGS:
+    -h, --help       Prints help information
+    -V, --version    Prints version information
+
+OPTIONS:
+    -c, --connections &lt;NUMBER&gt;     number of peer connections [default: 5]
+    -d, --data &lt;DIRECTORY&gt;         data directory [default: .]
+    -i, --discovery &lt;discovery&gt;    turn peer discovery on or off [default: on]  [possible values: on, off]
+    -l, --log &lt;LEVEL&gt;              logging level [default: info]  [possible values: debug, info, warn, error]
+    -n, --net &lt;NETWORK&gt;            bitcoin network [default: testnet]  [possible values: regtest, testnet]
+    -p, --password &lt;PASSWORD&gt;      wallet password
+    -a, --peers &lt;IP_ADDRESS&gt;...    ip addresses of peer nodes, eg. 127.0.0.1:9333
+</span></code></pre>
+<p>You can start the wallet by using something like:</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#bf616a;">cargo</span><span style="color:#c0c5ce;"> run</span><span style="color:#bf616a;"> --example</span><span style="color:#c0c5ce;"> wallet -- --password testpass
+</span></code></pre>
+<p>This will get you in the wallet application, which will await further commands:</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#c0c5ce;">cargo run --example wallet -- --password testpass
+
+logging level: INFO
+working directory: &quot;.&quot;
+discovery: true
+network: testnet
+peers: []
+created new wallet, seed words: use cattle tag cage good razor plunge pipe dial cabbage goat approve
+first deposit address: 2MxRb5jtzezZLMrx7qLQuJXagStjGjtxKC7
+peer connections: 5
+No previous history.
+starting p2p thread
+&gt;&gt;
+</span></code></pre>
+<p>Once wallet is started, use the <code>help</code> command from the &gt;&gt; prompt to get a list of sub-commands the wallet can execute.</p>
+<br />
+<h2 id="using-the-wallet-advanced">Using the Wallet (Advanced)</h2>
+<p>A more involved wallet startup might look something like the following, and would require the use of a local regtest network:</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#bf616a;">cargo</span><span style="color:#c0c5ce;"> run</span><span style="color:#bf616a;"> --example</span><span style="color:#c0c5ce;"> wallet -- --net regtest --password testpass --peers 127.0.0.1:18432
+</span></code></pre>
+<p>A great way to get a regtest going is by using Nigiri. Check out <a href="https://bitcoindevkit.org/docs/testing-bdk/nigiri-regtest/">our article</a> on how to do just that if you need. From there, use the Nigiri Chopsticks API to create a new block and send the reward to <code>&lt;DEPOSIT ADDRESS&gt;</code></p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#bf616a;">curl -X</span><span style="color:#c0c5ce;"> POST</span><span style="color:#bf616a;"> --data </span><span style="color:#c0c5ce;">&#39;</span><span style="color:#a3be8c;">{&quot;address&quot;: &quot;&lt;DEPOSIT ADDRESS&gt;&quot;}</span><span style="color:#c0c5ce;">&#39; http://localhost:3000/faucet
+</span></code></pre>
+<p>Or connect to the Nigiri created bitcoind and use the containers bitcoin-cli to generate multiple bocks and send the reward to <code>&lt;DEPOSIT ADDRESS&gt;</code></p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#bf616a;">docker</span><span style="color:#c0c5ce;"> exec</span><span style="color:#bf616a;"> -it</span><span style="color:#c0c5ce;"> resources_bitcoin_1 bitcoin-cli</span><span style="color:#bf616a;"> -regtest -rpcport</span><span style="color:#c0c5ce;">=19001</span><span style="color:#bf616a;"> -rpcuser</span><span style="color:#c0c5ce;">=admin1</span><span style="color:#bf616a;"> -rpcpassword</span><span style="color:#c0c5ce;">=123 generatetoaddress 100 &lt;DEPOSIT ADDRESS&gt;
+</span></code></pre>
+<p>Or if you have bitcoin-cli installed on your local OS outside the Nigiri container you can use it to tell the Nigiri 
+created bitcoind to generate multiple blocks and send the rewards to <code>&lt;DEPOSIT ADDRESS&gt;</code></p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#bf616a;">bitcoin-cli -regtest -rpcport</span><span style="color:#c0c5ce;">=18433</span><span style="color:#bf616a;"> -rpcuser</span><span style="color:#c0c5ce;">=admin1</span><span style="color:#bf616a;"> -rpcpassword</span><span style="color:#c0c5ce;">=123 generatetoaddress 100 &lt;DEPOSIT ADDRESS&gt;
+</span></code></pre>
+<p>Using the wallet generates <code>/testnet/</code> or <code>/regtest/</code> directories (by default in the directory where the wallet is called), which you can delete once you are done with:</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#bf616a;">rm -rf</span><span style="color:#c0c5ce;"> ./testnet
+</span><span style="color:#bf616a;">rm -rf</span><span style="color:#c0c5ce;"> ./regtest
+</span></code></pre><br />
+<h2 id="checking-the-logs">Checking the Logs</h2>
+<p>The wallet will keep its logs in a file called <code>wallet.log</code> located in the newly created <code>/regtest/</code> or <code>/testnet/</code> directory. You can print the lastest logs using the following command:</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#bf616a;">tail -f</span><span style="color:#c0c5ce;"> regtest/wallet.log
+</span></code></pre>
+<p>The wallet also keeps a history of all commands passed to it, which are in the <code>/regtest/history.txt</code> file. Print out its content using</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#bf616a;">cat</span><span style="color:#c0c5ce;"> ./regtest/history.txt
+</span></code></pre>
+</article>
+
+  </div>
+</div>
+
+
+    <div>
+        <div class="footer-parent blockGreyFoot">
+    <div class="footerBlock">
+        <div>
+            <h3 class="ftbTr_" id="fBTrig_-0">Software</h3>
+            <ul class="ftb_" id="fBT_-0">
+                <li>
+                    WIP
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h3 class="ftbTr_" id="fBTrig_-1">Resources</h3>
+            <ul class="ftb_" id="fBT_-1">
+                <li>
+                    <a alt="roadmap" href="/roadmap">Roadmap</a>
+                </li>
+                <li class="nullTrans">
+                    <a target="_blank" rel="noopener noreferrer" class="nullTrans" alt="github" href="https://github.com/bitcoindevkit/">Github</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h3 class="ftbTr_" id="fBTrig_-3">Community</h3>
+            <ul class="ftb_" id="fBT_-3">
+                <li>
+                    <a target="_blank" rel="noopener noreferrer" alt="slack" href="https://join.slack.com/t/bitcoindevkit/shared_invite/zt-fw7df650-bpxTis9xwnCupbFZClbJJA">Slack</a>
+                </li>
+                <li>
+                    <a alt="blog" href="/blog">Blog</a>
+                </li>
+                <li>
+                    <a target="_blank" rel="noopener noreferrer" alt="twitter" href="https://twitter.com/bitcoindevkit">Twitter</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <p class="copyright_">
+            <br>
+            Content Released under MIT license.
+            <br>
+            This website does not use cookies nor collect personal data.
+        </p>
+    </div>
+
+</div>
+
+    </div>
+
+</div>
+
+</div>
+<!-- END OF THEME CONTAINER -->
+</body>
+<script src="/js/scripts.js"></script>
+<script>
+    function burger() {
+      var x = document.getElementById("bger");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+</script>
+</html>
